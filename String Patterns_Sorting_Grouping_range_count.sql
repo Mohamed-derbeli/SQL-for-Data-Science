@@ -48,4 +48,10 @@ group by DEP_ID
 having count(DEP_ID)<4 
 order by AVG(SALARY)
 
+--Query 6: Similar to 4B but instead of department ID use department name. Retrieve a list of employees ordered by
+-- department name, and within each department ordered alphabetically in descending order by last name.
+select D.DEP_NAME, E.F_NAME, E.L_NAME -- we used D and E to make it short
+from DEPARTMENTS as D, EMPLOYEES as E 
+order by DEP_NAME, L_NAME DESC
+
 --Note: 'WHERE clause' is used for filtering the entire result set whereas the 'HAVING clause' is used for filtering the result of the grouping
