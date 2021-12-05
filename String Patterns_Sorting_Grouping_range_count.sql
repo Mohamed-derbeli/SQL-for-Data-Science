@@ -47,3 +47,5 @@ from EMPLOYEES
 group by DEP_ID 
 having count(DEP_ID)<4 
 order by AVG(SALARY)
+
+--Note: 'WHERE clause' is used for filtering the entire result set whereas the 'HAVING clause' is used for filtering the result of the grouping
